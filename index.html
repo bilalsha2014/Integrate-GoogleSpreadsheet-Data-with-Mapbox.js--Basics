@@ -109,7 +109,7 @@
           type: "GET",
           //YOUR TURN: Replace with csv export link
           url:
-            "https://docs.google.com/spreadsheets/d/1PZu-xzVfOmFCnRdBcybnaNiywmRBs6PH-5ZzWhRAZ-A",
+            "https://docs.google.com/spreadsheets/d/1qS5cSQtqXDAe2y1VPR0l2T2P0PIlS6PGMvRCAkUb-MI",
           dataType: "text",
           success: function (csvData) {
             makeGeoJSON(csvData);
@@ -150,19 +150,19 @@
                   // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
                   var description =
                     `<h3>` +
-                    e.features[0].properties.Name +
+                    e.features[0].properties.PropertyName +
                     `</h3>` +
                     `<h4>` +
                     `<b>` +
                     `Address: ` +
                     `</b>` +
-                    e.features[0].properties.Address +
+                    e.features[0].properties.Suburb +
                     `</h4>` +
                     `<h4>` +
                     `<b>` +
                     `Phone: ` +
                     `</b>` +
-                    e.features[0].properties.Phone +
+                    e.features[0].properties.Area +
                     `</h4>`;
 
                   // Ensure that if the map is zoomed out such that multiple
